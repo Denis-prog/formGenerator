@@ -96,7 +96,6 @@ const onSubmit = () => {
 }
 
 const getParamString = <T extends { value: K, label: string }, K>(allData: Array<T>, selectedValues: Array<K>) => {
-  console.log('selectedValues: ', selectedValues);
   const list = allData.filter(({ value }) => selectedValues.includes(value));
 
   const res = list.reduce((acc, { label }) => {

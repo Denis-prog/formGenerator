@@ -48,7 +48,6 @@ const onFocus = () => {
 const model = defineModel();
 
 const changeControlValue = <T>(v: T) => {
-  console.log(v);
   emits('update:modelValue', v)
 }
 

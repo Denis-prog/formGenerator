@@ -118,8 +118,6 @@ const validate = function () {
         }
       })
 
-    console.log(formValid);
-
     // eslint-disable-next-line @typescript-eslint/no-unused-expressions
     formValid ? resolve(formValid) : reject(formValid)
   })

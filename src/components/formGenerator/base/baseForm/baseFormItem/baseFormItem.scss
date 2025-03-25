@@ -1,0 +1,47 @@
+@use '@/styles/variables/variables' as style;
+
+.base-form-item {
+  width: 100%;
+
+  .control-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-label {
+    line-height: 22px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: style.$text-color-secondary;
+    margin-bottom: 4px;
+    white-space: nowrap;
+  }
+
+  &-message {
+    display: flex;
+    font-size: 14px;
+    letter-spacing: 0px;
+    color: style.$text-color-secondary;
+    margin-top: 4px;
+
+    &.-error {
+      color: style.$danger-color;
+    }
+  }
+
+  &.-error {
+    :deep(.base-input__control) {
+      border-color: style.$danger-color;
+    }
+  }
+
+  &.-required {
+    .base-form-item-label {
+      &:after {
+        content: '*';
+        letter-spacing: 1.2px;
+        color: style.$danger-color;
+      }
+    }
+  }
+}
